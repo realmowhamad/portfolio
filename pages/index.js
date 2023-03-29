@@ -1,4 +1,6 @@
 import AboutBox from "@/Components/About/AboutBox";
+import Experience from "@/Components/Experience/Experience";
+import ExperiencesData from "@/Components/Experience/ExperienceData";
 import Skill from "@/Components/Skill/Skill";
 import skillsData from "@/Components/SkillsData";
 import skills from "@/Components/SkillsData";
@@ -33,12 +35,13 @@ export default function Home() {
               />
             </span>
             <h6>based in London, United Kingdom</h6>
-
             <button className="hireMeBtn">Hire Me</button>
-
           </div>
+
+
+
           <section className="about">
-            <h1>ABOUT ME</h1>
+            <h1 className="backTitle">ABOUT ME</h1>
             <h2>Know Me More</h2>
             <span className="line"></span>
             <div className="interview ">
@@ -66,9 +69,18 @@ export default function Home() {
 
             </section>
 
-
           </div>
+          <div className="about">
+            <h1 className="backTitle">SUMMARY</h1>
+            <h2>Resume</h2>
+            <span className="line"></span>
+            <section className="experiences">
+              {ExperiencesData.map(x => (
+                <Experience {...x} />
+              ))}
 
+            </section>
+          </div>
         </div>
       </Layout>
     </>
