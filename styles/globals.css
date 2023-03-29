@@ -1,10 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+@import url(./Fonts/Fonts.css);
+
+
 
 @layer components {
   .container {
-    @apply w-screen h-screen bg-red-200
+    @apply w-screen h-screen
   }
 
   .background {
@@ -24,12 +28,83 @@
   }
 
   .hireMeBtn {
-    @apply p-2 px-4 mt-5 border border-teal-500 rounded-[10px] text-xl text-teal-500
+    @apply p-2 px-4 mt-5 border border-[#58c3ef] rounded-[10px] text-xl text-[#58c3ef]
   }
 
 
   .hireMeBtn:hover {
-    @apply bg-teal-500 text-white transition-all
+    @apply bg-[#58c3ef] text-white transition-all
+  }
+
+  .about {
+    @apply bg-[#212529] w-full h-1/2 flex flex-col items-center p-5
+  }
+
+  .about h1 {
+    @apply text-[#282d31] text-[100px] font-black
+  }
+
+  .about h2 {
+    @apply text-white text-[30px] z-10 top-4 relative mt-7
+  }
+
+  .line {
+    @apply w-[7em] h-1 bg-[#58c3ef] top-4 relative
+  }
+
+  .interview {
+    @apply z-10 h-full mt-5 p-10 flex w-5/6 mx-auto
+  }
+
+  .whoIAm {
+    @apply z-10 flex flex-col justify-start items-start
+  }
+
+  .whoIAm h1 {
+    @apply text-white text-[20px] font-semibold
+  }
+
+  .whoIAm p {
+    @apply text-white text-[20px] w-4/6 text-justify mt-4 leading-10
+  }
+
+  .whoIAm h1 span {
+    @apply text-[#58c3ef] text-[20px]
+  }
+
+  .box {
+    @apply w-3/6 flex flex-col
+  }
+
+  .aboutBox {
+    @apply flex m-2 items-center justify-around relative
+  }
+
+
+  .aboutBoxTitle {
+    @apply shrink flex items-center text-white text-xl w-1/6
+  }
+
+  .aboutBoxDetail,
+  .aboutBox a {
+    @apply grow h-full text-white text-xl w-full
+  }
+
+  .aboutBox a {
+    @apply text-[#58c3ef]
+  }
+
+  /* -----------------------------------------*/
+  .skillSection {
+    @apply bg-[#343a40] w-full h-1/2 flex flex-col items-center
+  }
+
+  .skillSection h1 {
+    @apply text-[#282d31] text-[100px] font-black
+  }
+
+  .skillSection h2 {
+    @apply text-white text-[30px] z-10 top-4 relative mt-7
   }
 
 
@@ -40,4 +115,35 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
+  font-family: Poppins_Regular;
+
+}
+
+.about h1 {
+  position: absolute;
+  letter-spacing: 10px;
+  font-family: poppins_bold;
+}
+
+.whoIAm h1 {
+  letter-spacing: 0;
+  position: relative;
+}
+
+.skillSection h1 {
+  position: absolute;
+  letter-spacing: 10px;
+  font-family: poppins_bold;
+}
+
+.skills img {
+  filter: grayscale();
+  aspect-ratio: 1/1;
+  width: 50%;
+  transition: all 0.5s;
+}
+
+.skills img:hover {
+  filter: none;
+  transform: scale(1.2);
 }
