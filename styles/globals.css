@@ -5,14 +5,15 @@
 @import url(./Fonts/Fonts.css);
 
 
-
 @layer components {
+
+
   .container {
     @apply w-screen h-screen
   }
 
   .background {
-    @apply w-screen h-screen z-0 bg-black opacity-70
+    @apply w-screen h-screen z-0
   }
 
   .main {
@@ -21,6 +22,10 @@
 
   .main h1 {
     @apply text-white text-[40px]
+  }
+
+  .newS {
+    @apply text-yellow-300
   }
 
   .main h6 {
@@ -37,14 +42,26 @@
   }
 
   .about {
-    @apply bg-[#212529] w-full h-1/2 flex flex-col items-center p-5
+    @apply bg-[#212529] w-full h-auto flex flex-col items-center p-5
   }
 
-  .about .backTitle {
+  .backTitle {
     @apply text-[#282d31] text-[100px] font-black
   }
 
   .about h2 {
+    @apply text-white text-[30px] z-10 top-4 relative mt-7
+  }
+
+  .resume {
+    @apply bg-[#212529] w-full h-auto flex flex-col items-center p-5
+  }
+
+  .resume .backTitle {
+    @apply text-[#282d31] text-[100px] font-black
+  }
+
+  .resume h2 {
     @apply text-white text-[30px] z-10 top-4 relative mt-7
   }
 
@@ -65,7 +82,7 @@
   }
 
   .whoIAm p {
-    @apply text-white text-[20px] w-4/6 text-justify mt-4 leading-10
+    @apply text-white text-[20px] w-full text-justify w-5/6 mt-4 leading-10
   }
 
   .whoIAm h1 span {
@@ -95,25 +112,56 @@
   }
 
   /* -----------------------------------------*/
-  .skillSection {
-    @apply bg-[#343a40] w-full h-1/2 flex flex-col items-center
+  .skillSection,
+  .ContactMe {
+    @apply bg-[#343a40] w-full h-auto flex flex-col items-center
   }
 
-  .skillSection h1 {
+  .skillSection h1,
+  .ContactMe h1 {
     @apply text-[#282d31] text-[100px] font-black
   }
 
-  .skillSection h2 {
+  .skillSection h2,
+  .ContactMe h2 {
     @apply text-white text-[30px] z-10 top-4 relative mt-7
   }
 
   .experiences {
     @apply w-full h-auto flex items-center justify-evenly p-5 mt-20
   }
+
+  .adressInfo {
+    @apply flex w-full justify-evenly items-center h-full mt-10
+  }
+
+  .adressInfo h6 {
+    @apply text-white font-bold text-xl leading-10 tracking-[5px]
+  }
+
+  .adressInfo li {
+    @apply flex items-center px-5
+  }
+
+  .adressInfo li p {
+    @apply text-white
+  }
+
+  .adressInfo li i {
+    @apply mr-3 text-[#58c3ef] text-2xl my-3
+  }
+
+  .socialMedia {
+    @apply flex flex-col
+  }
+
+  .socialMedia ul {
+    @apply flex
+  }
 }
 
 .container {
-  background-image: url('./1.jpg');
+  background-image: url('/me.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
@@ -121,7 +169,13 @@
 
 }
 
-.about .backTitle {
+.background {
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+
+}
+
+
+.backTitle {
   position: absolute;
   letter-spacing: 10px;
   font-family: poppins_bold;
@@ -138,6 +192,11 @@
   font-family: poppins_bold;
 }
 
+.skills {
+  margin-top: 5rem;
+  height: 20rem;
+}
+
 .skills img {
   filter: grayscale();
   aspect-ratio: 1/1;
@@ -148,4 +207,25 @@
 .skills img:hover {
   filter: none;
   transform: scale(1.2);
+}
+
+.notAv h1 {
+  animation: Warning 5s infinite ease-in-out;
+}
+
+@keyframes Warning {
+  0% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.2);
+
+  }
+
+  100% {
+    transform: scale(0.9);
+
+  }
+
 }

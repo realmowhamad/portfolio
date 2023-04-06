@@ -1,0 +1,36 @@
+@tailwind components;
+
+
+
+
+@layer components {
+    .ContactMeForm {
+        @apply rounded-[8px] flex flex-col
+    }
+
+    .sectionContainer {
+        @apply flex flex-col justify-center items-start w-full pl-2 h-20
+    }
+
+    .sectionContainer label,
+    .sectionContainer2 label {
+        @apply text-white my-1
+    }
+
+
+    .sectionContainer input {
+        @apply rounded-[3px] w-[90%] h-8
+    }
+
+    .sectionContainer2 {
+        @apply flex flex-col justify-center items-start w-full pl-2
+    }
+
+    .sectionContainer2 textarea {
+        @apply w-[95%] h-52 rounded-[8px]
+    }
+
+    .submitBtn {
+        @apply bg-[#58c3ef] text-white px-10 py-2 my-2 rounded-[8px]
+    }
+}

@@ -8,6 +8,7 @@ const skillsData = [
     { id: 4, title: "TypeSctipt", icon: "ts2.svg", value: 20 },
     { id: 5, title: "React Js", icon: "React2.svg", value: 89 },
     { id: 6, title: "Next Js", icon: "Next2.svg", value: 70 },
+    { id: 7, title: "Git", icon: "git.svg", value: 70 }
 ]
 
 export default skillsData
